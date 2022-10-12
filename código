@@ -1,0 +1,81 @@
+import pyautogui
+import pyperclip
+import time
+
+pyautogui.PAUSE = 2;
+
+arquivo = r'C:\Users\lu_fu\Downloads\laraselfie.jpg' #coloque o local do arquivo que você deseja inserir no envio
+
+pyautogui.hotkey("ctrl", "t")
+time.sleep(2)
+pyautogui.write("www.google.com")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(2)
+pyautogui.write("whatsapp web")
+time.sleep(2)
+pyautogui.press("enter")
+pyautogui.click(x=264, y=320)
+
+while not pyautogui.locateOnScreen("whatsapp.png", confidence=0.9):
+    time.sleep(1)
+
+pyautogui.click(x=261, y=182)
+time.sleep(3)
+pyautogui.write("boss")
+time.sleep(3)
+pyautogui.click(x=220, y=318)
+time.sleep(3)
+pyautogui.write("boa noite Sr. temos um visitante da portaria")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(2)
+pyperclip.copy("Temos autorização para deixa-lo entrar?")
+time.sleep(2)
+pyautogui.hotkey("ctrl", "v")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(2)
+pyautogui.write("Estamos falando da srta. Lara")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(5)
+pyautogui.click(x=486, y=690)
+time.sleep(2)
+pyautogui.click(x=476, y=627)
+time.sleep(3)
+pyperclip.copy(arquivo)
+time.sleep(4)
+pyautogui.hotkey("ctrl", "v")
+time.sleep(4)
+pyautogui.press("enter")
+time.sleep(5)
+pyautogui.write("Visitante liberado e a caminho...")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(4)
+pyautogui.write("ela tambem deixou esta pergunta aqui e este link...")
+time.sleep(2)
+pyautogui.press("enter")
+time.sleep(10)
+pyperclip.copy("https://www.facebook.com/profile.php?id=100063466243635")
+time.sleep(2)
+pyautogui.hotkey("ctrl", "v")
+time.sleep(2)
+pyautogui.press("enter")
+
+/*time.sleep(3)
+pyautogui.position() #comando para pegar a posição do mouse onde quer clicar
+
+time.sleep() #comando de tempo de espera necessário que deve ser incluído dentro dos parenteses para uma ação ser executada
+
+pyautogui.hotkey() #comando para apertar 2 botões ou mais
+
+pyautogui.write() #comando para escrever os textos, lembrando que não pega caracteres especiais
+
+pyautogui.press() #comando para pressionar uma tecla
+
+pyautogui.click() #comando para clicar em um botão ou local da tela
+
+pyperclip.copy() #necessário o uso para digitar texto com caracteres especiais, pois o pyautogui ignora alguns caracteres como ? ou ç ou letras com pontuações, um site ou frase acaba quebrando sem este comando
+*/
